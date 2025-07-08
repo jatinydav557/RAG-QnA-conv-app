@@ -1,7 +1,4 @@
-
----
-
-````markdown
+🔗 👉 **[Watch the Demo on YouTube](https://www.youtube.com/watch?v=e6-uXlkQFQc&list=PLe-YIIlt-fbO3hXVoaPK56ikWRT0A9Gzr&index=5&ab_channel=Jatin)**
 # 🧾 Conversational RAG PDF Q&A App | LLMs + Memory + Chroma
 
 This project allows you to **chat with your PDFs** using a Retrieval-Augmented Generation (RAG) pipeline.  
@@ -19,11 +16,13 @@ Upload a paper like _“Self-Attention for Generative Models”_ and interactive
 
 ## 🧩 Stack Overview
 
-- 🔥 **LLM**: Groq’s `gemma2-9b-it`
-- 🧠 **Embeddings**: HuggingFace `all-MiniLM-L6-v2`
-- 📦 **Vector Store**: ChromaDB
-- 🧠 **LangChain Features**: Message History, Chaining, Memory-aware Retrieval
-- 💬 **Frontend**: Streamlit
+| Component        | Tech Used                        |
+|------------------|----------------------------------|
+| 🔥 LLM            | Groq’s `gemma2-9b-it`             |
+| 🧠 Embeddings     | HuggingFace `all-MiniLM-L6-v2`    |
+| 📦 Vector Store   | ChromaDB                          |
+| 💬 Memory         | LangChain Runnable + History      |
+| 🌐 Frontend       | Streamlit                         |
 
 ---
 
@@ -32,11 +31,11 @@ Upload a paper like _“Self-Attention for Generative Models”_ and interactive
 ```bash
 .
 ├── app.py                # Main Streamlit app
-├── .env                  # Secrets like GROQ key, HF token
+├── .env                  # Secrets like HF token
 ├── requirements.txt      # Dependencies
 ├── temp.pdf              # Placeholder for uploaded files
 └── README.md             # You're reading it
-````
+```
 
 ---
 
@@ -45,15 +44,15 @@ Upload a paper like _“Self-Attention for Generative Models”_ and interactive
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/conversational-rag-pdf.git
-cd conversational-rag-pdf
+git clone https://github.com/jatinydav557/RAG-QnA-conv-app.git
+cd RAG-QnA-conv-app
 ```
 
 ### 2️⃣ Set up Virtual Environment
 
 ```bash
-uv venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
 ### 3️⃣ Install Dependencies
@@ -68,7 +67,7 @@ pip install -r requirements.txt
 HF_TOKEN=your_huggingface_token
 ```
 
-Groq API key is entered inside the Streamlit UI at runtime.
+🟡 Note: Your Groq API key is securely entered at runtime via Streamlit input — not saved in `.env`.
 
 ---
 
@@ -113,44 +112,37 @@ protobuf==3.20.3
 
 ## 🎓 About Me
 
-I'm an **MCA final-year student**, exploring **Applied AI, Generative Models, and LLM RAG systems**.
-This project reflects my learning in memory-aware chat systems, embeddings, and real-time vector search.
+I’m **Jatin**, a final-year MCA student passionate about building real-world apps using **GenAI**, **LLMs**, and **RAG pipelines**.  
+This project showcases my skills in **embedding-based search**, **contextual memory**, and **LLM chaining** for PDF-based Q&A.
 
-📌 Open to internships and full-time roles in:
+📌 Actively looking for:
 
-* 📊 Data Science
-* 🤖 LLM Engineering
-* 🧠 NLP / RAG Systems
-* ⚙️ MLOps / AI Research Engineering
+* 📊 Data Science Roles  
+* 🧠 LLM / GenAI Engineering  
+* 🤖 NLP & RAG Systems  
+* ⚙️ MLOps / Research Engineering
 
-🔗 [LinkedIn](https://www.linkedin.com/in/yourname)
-🌐 [Portfolio](https://yourwebsite.com)
+---
+
+## 📞 Let's Connect
+
+- **💼 LinkedIn:** [linkedin.com/in/jatin557](https://www.linkedin.com/in/jatin557)
+- **📦 GitHub:** [github.com/jatinydav557](https://github.com/jatinydav557)
+- **📬 Email:** [jatinydav557@gmail.com](mailto:jatinydav557@gmail.com)
+- **📱 Phone:** [+91-7340386035](tel:+917340386035)
+- **🎥 YouTube:** [Watch Other Projects](https://www.youtube.com/@jatinML/playlists)
 
 ---
 
 ## 🧭 Future Plans
 
-* 🌍 Deploy on Streamlit Cloud / Hugging Face Spaces
-* 💾 Save chat history per user to database
-* 🔗 Support multi-PDF chaining and chunk summarization
+* 🌍 Deploy on Streamlit Cloud / Hugging Face Spaces  
+* 💾 Save chat history per user to local DB  
+* 🔗 Support multi-PDF chaining and automatic summarization  
 
 ---
 
-⭐ **Star this repo** if it helped you! Fork it to build your own research Q\&A app!
+⭐ If this project inspired you, **give it a star** and feel free to fork and customize it!
 
-```
+> “Build assistants *you* control — not just use ones built by others.”
 
----
-
-### ✅ What to Replace:
-- `yourusername` in clone URL
-- `your_huggingface_token` in `.env`
-- LinkedIn and portfolio URLs
-
-Let me know if you'd like:
-- A banner for this project (like the others)
-- A Hugging Face Spaces deployment guide
-- Streamlit Cloud or GCP deployment workflow
-
-Want me to generate a banner for this too?
-```
